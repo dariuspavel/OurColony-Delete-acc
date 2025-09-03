@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Delete Account – Our Colony by Golden Desert</title>
+  <style>
+    :root{ --bg:#0e1116; --card:#161b22; --text:#e6edf3; --muted:#9da7b3; --accent:#7bafeb; }
+    *{box-sizing:border-box}
+    body{margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif; background:var(--bg); color:var(--text); line-height:1.6}
+    .wrap{max-width:860px; margin:40px auto; padding:24px}
+    .card{background:var(--card); border:1px solid #232a34; border-radius:14px; padding:24px}
+    h1{font-size:28px; margin:0 0 6px}
+    h2{font-size:20px; margin-top:28px}
+    p,li{font-size:16px}
+    .meta{color:var(--muted); font-size:14px; margin-bottom:14px}
+    .cta{display:inline-block; margin:8px 0; padding:10px 16px; background:var(--accent); color:#0b1a2b; border-radius:10px; text-decoration:none; font-weight:600}
+    code{background:#0b1220; padding:2px 6px; border-radius:6px}
+    ul{padding-left:20px}
+    .footer{color:var(--muted); font-size:14px; margin-top:26px}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="card">
+      <h1>Delete Account</h1>
+      <div class="meta"><strong>App:</strong> <span id="appName">Our Colony</span> • <strong>Developer:</strong> <span id="devName">Golden Desert</span> • <strong>Effective:</strong> <span id="effectiveDate"></span></div>
+      <script>
+        (function(){
+          var d=new Date(), yyyy=d.getFullYear(), mm=('0'+(d.getMonth()+1)).slice(-2), dd=('0'+d.getDate()).slice(-2);
+          document.getElementById('effectiveDate').textContent = yyyy+'-'+mm+'-'+dd;
+        })();
+      </script>
+
+      <h2>How to request deletion</h2>
+      <ol>
+        <li><strong>In-app:</strong> Settings → Account → Delete My Data. This removes your account and all associated cloud saves immediately.</li>
+        <li><strong>By email:</strong> Email us at <a href="mailto:goldendesert.studio@gmail.com">goldendesert.studio@gmail.com</a> from the address linked to your account. Include your player ID (if known) and “Delete Account” in the subject.</li>
+      </ol>
+      <a class="cta" href="mailto:goldendesert.studio@gmail.com?subject=Delete%20Account%20Request">Email deletion request</a>
+
+      <h2>What we delete</h2>
+      <ul>
+        <li>Account and authentication record (OAuth/UGS Auth link).</li>
+        <li>Cloud Save data (progress, currencies, settings, unlocks).</li>
+        <li>Any other user-provided data stored by the app.</li>
+      </ul>
+
+      <h2>What we may retain</h2>
+      <ul>
+        <li>Security logs/anti-fraud records (if any) for up to <code>30 days</code>.</li>
+        <li>Aggregated, non-identifiable analytics (if collected).</li>
+      </ul>
+
+      <h2>Processing time</h2>
+      <ul>
+        <li>In-app deletion: immediate.</li>
+        <li>Email requests: within <code>30 days</code>.</li>
+      </ul>
+
+      <h2>Encryption in transit</h2>
+      <p>All communication between the app and our servers uses HTTPS/TLS.</p>
+
+      <h2>Identity verification</h2>
+      <p>We may request additional information to confirm ownership before completing a deletion request initiated via email.</p>
+
+      <div class="footer">
+        Questions? Contact <a href="mailto:goldendesert.studio@gmail.com">goldendesert.studio@gmail.com</a>.
+      </div>
+    </div>
+  </main>
+</body>
+</html>
